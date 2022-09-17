@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Header from "./FakeStore/header/Header";
+import Home from "./FakeStore/home/Home";
+import "./App.css";
+import Products from "./FakeStore/products/Products";
+import Contact from "./FakeStore/contact/Contact";
+import About from "./FakeStore/about/About";
+import Clock from "./clock/Clock";
+import Signup from "./formhandling/Signup";
+import ErrorPage from "./component/ErrorPage";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Clock />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/*" element={<ErrorPage />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
-
-export default App;

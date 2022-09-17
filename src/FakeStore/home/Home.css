@@ -1,0 +1,28 @@
+.homeBody {
+    background-color: #f5f5f5;
+    color: white;
+    height: 93vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h {
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 0 0 10px rgb(45, 139, 72);
+}
+.hp {
+    font-size: 1.5em;
+    color: #fff;
+    text-shadow: 0 0 10px rgb(30, 138, 68);
+}
+.homeImage {
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+}
+h2 {
+    color: #f5f5f5;
+}
